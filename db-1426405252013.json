@@ -1,0 +1,22 @@
+{
+  "customers": [
+    {
+      "id": "jon-doe",
+      "name": "Jon Doe",
+      "email": "test@test.test",
+      "telephone": "+380501112233",
+      "address": "22a Shevchenko str"
+    },
+    {
+      "id": "steve-jobs",
+      "name": "Steve Jobs",
+      "email": "test@test.test",
+      "telephone": "+380501112233",
+      "address": "22a Shevchenko str"
+    },
+    {
+      "name": "asdasd123",
+      "id": "c843aa01-00d4-43ce-bc1a-b9d033fa929e"
+    }
+  ]
+}

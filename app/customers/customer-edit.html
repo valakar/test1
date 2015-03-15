@@ -1,0 +1,108 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+      <form name="customerForm" ng-submit="updateCustomer()" role="form">
+        <h2>Update customer</h2>
+        <div class="form-group">
+          <input type="text" name="name" id="name" class="form-control input-lg" placeholder="Name" tabindex="1"  ng-model="customer[0].name" required>
+        </div>
+
+        <div class="form-group">
+          <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="2" ng-model="customer[0].email" required>
+        </div>
+
+        <div class="form-group">
+          <input type="text" name="telephone" id="telephone" class="form-control input-lg" placeholder="Telephone" tabindex="3" ng-model="customer[0].telephone" required>
+        </div>
+
+        <div class="form-group">
+          <input type="text" name="address" id="address" class="form-control input-lg" placeholder="Address" tabindex="4" ng-model="customer[0].address" required>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="form-group">
+              <input type="text" name="street" id="street" class="form-control input-lg" placeholder="Street" tabindex="5" ng-model="customer[0].street">
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="form-group">
+              <input type="text" name="city" id="city" class="form-control input-lg" placeholder="City" tabindex="6" ng-model="customer[0].city">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="form-group">
+              <input type="text" name="state" id="state" class="form-control input-lg" placeholder="State" tabindex="7" ng-model="customer[0].state">
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="form-group">
+              <input type="number" name="zip" id="zip" class="form-control input-lg" placeholder="Zip" tabindex="8" ng-model="customer[0].zip">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-md-6"><a href="#/app/customers" class="btn btn-primary btn-block btn-lg">Cancel</a></div>
+          <div class="col-xs-12 col-md-6"><button type="submit"  class="btn btn-success btn-block btn-lg">Save</button></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="container" ng-show="customer[0]">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{customer[0].name}}</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class=" col-md-10 col-lg-10 col-md-offset-1"> 
+              <table class="table table-user-information">
+                <tbody>
+                  <tr ng-show="customer[0].email">
+                    <td>Email:</td>
+                    <td>{{customer[0].email}}</td>
+                  </tr>
+                  <tr ng-show="customer[0].telephone">
+                    <td>Telephone:</td>
+                    <td>{{customer[0].telephone}}</td>
+                  </tr>
+                  <tr ng-show="customer[0].address">
+                    <td>Address</td>
+                    <td>{{customer[0].address}}</td>
+                  </tr>
+                  <tr ng-show="customer[0].street">
+                    <td>Street</td>
+                    <td>{{customer[0].street}}</td>
+                  </tr>
+                  <tr ng-show="customer[0].city">
+                    <td>City</td>
+                    <td>{{customer[0].city}}</td>
+                  </tr>
+                  <tr ng-show="customer[0].state">
+                    <td>State</td>
+                    <td>{{customer[0].state}}</td>
+                  </tr>
+                  <tr ng-show="customer[0].zip">
+                    <td>Zip</td>
+                    <td>{{customer[0].zip}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="panel-footer">
+          <a href="#/customers" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-chevron-left"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

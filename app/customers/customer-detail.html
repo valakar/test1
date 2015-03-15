@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{customer[0].name}}</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class=" col-md-10 col-lg-10 col-md-offset-1"> 
+              <table class="table table-user-information">
+                <tbody>
+                  <tr ng-show="customer[0].email">
+                    <td>Email:</td>
+                    <td>{{customer[0].email}}</td>
+                  </tr>
+                  <tr ng-show="customer[0].telephone">
+                    <td>Telephone:</td>
+                    <td>{{customer[0].telephone}}</td>
+                  </tr>
+                  <tr ng-show="customer[0].address">
+                    <td>Address</td>
+                    <td>{{customer[0].address}}</td>
+                  </tr>
+                  <tr ng-show="customer[0].street">
+                    <td>Street</td>
+                    <td>{{customer[0].street}}</td>
+                  </tr>
+                  <tr ng-show="customer[0].city">
+                    <td>City</td>
+                    <td>{{customer[0].city}}</td>
+                  </tr>
+                  <tr ng-show="customer[0].state">
+                    <td>State</td>
+                    <td>{{customer[0].state}}</td>
+                  </tr>
+                  <tr ng-show="customer[0].zip">
+                    <td>Zip</td>
+                    <td>{{customer[0].zip}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="panel-footer">
+          <a href="#/customers" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-chevron-left"></i></a>
+          <span class="pull-right" ng-controller="CustomerDelEditCtrl">
+            <a href="" ng-click="editCustomer(customer[0].id)" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
+            <a href="" ng-click="deleteCustomer(customer[0].id)" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

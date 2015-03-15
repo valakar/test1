@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="col-md-12">
+        <p class="text-center">Total number of customers: {{customers.length}}</p>
+
+        <div class="table-responsive">
+          <table id="mytable" class="table table-bordred table-striped">
+                 
+            <thead>
+             
+              <th>Name</th>
+              <th>Email</th>
+              <th>Telephone</th>
+              <th>Address</th>
+              <th>Edit</th>
+              <th>Delete</th>
+
+            </thead>
+            <tbody>
+      
+              <tr ng-repeat="customer in customers" ng-controller="CustomerDelEditCtrl">
+                <td><a href="#/customers/show/{{customer.id}}">{{customer.name}}</a></td>
+                <td>{{customer.email}}</td>
+                <td>{{customer.telephone}}</td>
+                <td>{{customer.address}}</td>
+                <td><a href="" ng-click="editCustomer(customer.id)" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a></td>
+                <td><a href="" ng-click="deleteCustomer(customer.id)" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a></td>
+              </tr>
+            </tbody>
+                    
+          </table>                
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
